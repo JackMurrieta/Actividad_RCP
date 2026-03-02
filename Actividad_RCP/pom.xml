@@ -8,8 +8,8 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>../../../ACTCARRITO/CarritoGRPCclient</module>
-        <module>../../../ACTCARRITO/CarritoGRPCserver</module>
+        <module>../CarritoGRPCclient</module>
+        <module>../CarritoGRPCserver</module>
     </modules>
 
     <properties>
