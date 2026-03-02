@@ -1,0 +1,75 @@
+syntax = "proto3";
+
+option java_package = "com.tienda.grpc";
+option java_multiple_files = true;
+
+// Definicion del servicio
+service CarritoService {
+    // Agregar/Eliminar producto del inventario
+    rpc AgregarProducto (Producto) returns (Respuesta);
+    //elimina un producto del carrito
+    rpc EliminarProducto (Producto) returns (Respuesta);
+
+    // Unario: envía el carrito completo y recibe el total procesado
+    // Valida: carrito no vacío, cantidad > 0, precio > 0
+    rpc ProcesarCarrito (CarritoRequest) returns (CarritoResponse);
+
+    // Si no hay inventario suficiente, stream de cancelación de orden
+    rpc CancelarOrden (CancelRequest) returns (stream CancelEvent);
+
+    // Consulta lista de productos disponibles (sin considerar inventario)
+    rpc ListarProductos (ListarRequest) returns (stream Producto);
+}
+
+// Representa un producto individual
+message Producto {
+    string id = 1;
+    string nombre = 2;
+    double precio = 3;
+    int32 cantidad = 4;
+}
+
+// Inventario de un producto (stock disponible)
+message Inventario {
+    string producto_id = 1;
+    string nombre = 2;
+    int32 stock_disponible = 3;
+}
+
+// Petición con lista de productos
+message CarritoRequest {
+    string usuario_id = 1;
+    repeated Producto items = 2; // lista de productos (no puede estar vacía)
+}
+
+message CarritoResponse {
+    string transaccion_id = 1;
+    double total_neto = 2;
+    double impuestos = 3;
+    double total_pagar = 4;
+    string estado = 5; // "Procesado", "Error", "Cancelado"
+}
+
+// Respuesta simple para agregar/eliminar
+message Respuesta {
+    bool exito = 1;
+    string mensaje = 2; // ej: "Producto agregado", "Error: no encontrado"
+}
+
+// Para solicitar cancelación de una orden
+message CancelRequest {
+    string transaccion_id = 1;
+    string motivo = 2; // ej: "Stock insuficiente"
+}
+
+// Eventos del stream de cancelación
+message CancelEvent {
+    string producto_id = 1;
+    string descripcion = 2; // ej: "Producto X cancelado por falta de stock"
+    string estado = 3; // "Cancelado", "Parcial"
+}
+
+// Para listar productos (puede filtrarse en el futuro)
+message ListarRequest {
+    string categoria = 1; // opcional, "" = todos
+}
