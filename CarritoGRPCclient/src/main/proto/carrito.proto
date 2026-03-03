@@ -25,7 +25,7 @@ message ItemCarrito{
 // La petición contiene una lista de productos
 message CarritoRequest {
   string usuario_id = 1;
-  repeated Producto items = 2; // Lista de productos
+  repeated  ItemCarrito items = 2; // Lista de productos
 }
 
 // La respuesta con el cálculo final

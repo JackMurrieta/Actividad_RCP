@@ -5,7 +5,7 @@ package com.tienda.grpc;
 
 /**
  * <pre>
- * Representa un producto individual
+ *Producto del catalago sin cantidad
  * </pre>
  *
  * Protobuf type {@code Producto}
@@ -133,17 +133,6 @@ private static final long serialVersionUID = 0L;
     return precio_;
   }
 
-  public static final int CANTIDAD_FIELD_NUMBER = 4;
-  private int cantidad_ = 0;
-  /**
-   * <code>int32 cantidad = 4;</code>
-   * @return The cantidad.
-   */
-  @java.lang.Override
-  public int getCantidad() {
-    return cantidad_;
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -167,9 +156,6 @@ private static final long serialVersionUID = 0L;
     if (java.lang.Double.doubleToRawLongBits(precio_) != 0) {
       output.writeDouble(3, precio_);
     }
-    if (cantidad_ != 0) {
-      output.writeInt32(4, cantidad_);
-    }
     getUnknownFields().writeTo(output);
   }
 
@@ -188,10 +174,6 @@ private static final long serialVersionUID = 0L;
     if (java.lang.Double.doubleToRawLongBits(precio_) != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(3, precio_);
-    }
-    if (cantidad_ != 0) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(4, cantidad_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -215,8 +197,6 @@ private static final long serialVersionUID = 0L;
     if (java.lang.Double.doubleToLongBits(getPrecio())
         != java.lang.Double.doubleToLongBits(
             other.getPrecio())) return false;
-    if (getCantidad()
-        != other.getCantidad()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -235,8 +215,6 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + PRECIO_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         java.lang.Double.doubleToLongBits(getPrecio()));
-    hash = (37 * hash) + CANTIDAD_FIELD_NUMBER;
-    hash = (53 * hash) + getCantidad();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -334,7 +312,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Representa un producto individual
+   *Producto del catalago sin cantidad
    * </pre>
    *
    * Protobuf type {@code Producto}
@@ -373,7 +351,6 @@ private static final long serialVersionUID = 0L;
       id_ = "";
       nombre_ = "";
       precio_ = 0D;
-      cantidad_ = 0;
       return this;
     }
 
@@ -416,9 +393,6 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.precio_ = precio_;
       }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.cantidad_ = cantidad_;
-      }
     }
 
     @java.lang.Override
@@ -445,9 +419,6 @@ private static final long serialVersionUID = 0L;
       }
       if (other.getPrecio() != 0D) {
         setPrecio(other.getPrecio());
-      }
-      if (other.getCantidad() != 0) {
-        setCantidad(other.getCantidad());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -490,11 +461,6 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000004;
               break;
             } // case 25
-            case 32: {
-              cantidad_ = input.readInt32();
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 32
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -684,38 +650,6 @@ private static final long serialVersionUID = 0L;
     public Builder clearPrecio() {
       bitField0_ = (bitField0_ & ~0x00000004);
       precio_ = 0D;
-      onChanged();
-      return this;
-    }
-
-    private int cantidad_ ;
-    /**
-     * <code>int32 cantidad = 4;</code>
-     * @return The cantidad.
-     */
-    @java.lang.Override
-    public int getCantidad() {
-      return cantidad_;
-    }
-    /**
-     * <code>int32 cantidad = 4;</code>
-     * @param value The cantidad to set.
-     * @return This builder for chaining.
-     */
-    public Builder setCantidad(int value) {
-
-      cantidad_ = value;
-      bitField0_ |= 0x00000008;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>int32 cantidad = 4;</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearCantidad() {
-      bitField0_ = (bitField0_ & ~0x00000008);
-      cantidad_ = 0;
       onChanged();
       return this;
     }

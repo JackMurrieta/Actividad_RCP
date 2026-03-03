@@ -20,46 +20,26 @@ public interface CarritoRequestOrBuilder extends
       getUsuarioIdBytes();
 
   /**
-   * <pre>
-   * Lista de productos
-   * </pre>
-   *
-   * <code>repeated .Producto items = 2;</code>
+   * <code>repeated .ItemCarrito items = 2;</code>
    */
-  java.util.List<com.tienda.grpc.Producto> 
+  java.util.List<com.tienda.grpc.ItemCarrito> 
       getItemsList();
   /**
-   * <pre>
-   * Lista de productos
-   * </pre>
-   *
-   * <code>repeated .Producto items = 2;</code>
+   * <code>repeated .ItemCarrito items = 2;</code>
    */
-  com.tienda.grpc.Producto getItems(int index);
+  com.tienda.grpc.ItemCarrito getItems(int index);
   /**
-   * <pre>
-   * Lista de productos
-   * </pre>
-   *
-   * <code>repeated .Producto items = 2;</code>
+   * <code>repeated .ItemCarrito items = 2;</code>
    */
   int getItemsCount();
   /**
-   * <pre>
-   * Lista de productos
-   * </pre>
-   *
-   * <code>repeated .Producto items = 2;</code>
+   * <code>repeated .ItemCarrito items = 2;</code>
    */
-  java.util.List<? extends com.tienda.grpc.ProductoOrBuilder> 
+  java.util.List<? extends com.tienda.grpc.ItemCarritoOrBuilder> 
       getItemsOrBuilderList();
   /**
-   * <pre>
-   * Lista de productos
-   * </pre>
-   *
-   * <code>repeated .Producto items = 2;</code>
+   * <code>repeated .ItemCarrito items = 2;</code>
    */
-  com.tienda.grpc.ProductoOrBuilder getItemsOrBuilder(
+  com.tienda.grpc.ItemCarritoOrBuilder getItemsOrBuilder(
       int index);
 }

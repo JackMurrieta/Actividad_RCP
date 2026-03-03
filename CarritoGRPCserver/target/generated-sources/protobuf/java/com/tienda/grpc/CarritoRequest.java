@@ -85,61 +85,41 @@ private static final long serialVersionUID = 0L;
 
   public static final int ITEMS_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
-  private java.util.List<com.tienda.grpc.Producto> items_;
+  private java.util.List<com.tienda.grpc.ItemCarrito> items_;
   /**
-   * <pre>
-   * Lista de productos
-   * </pre>
-   *
-   * <code>repeated .Producto items = 2;</code>
+   * <code>repeated .ItemCarrito items = 2;</code>
    */
   @java.lang.Override
-  public java.util.List<com.tienda.grpc.Producto> getItemsList() {
+  public java.util.List<com.tienda.grpc.ItemCarrito> getItemsList() {
     return items_;
   }
   /**
-   * <pre>
-   * Lista de productos
-   * </pre>
-   *
-   * <code>repeated .Producto items = 2;</code>
+   * <code>repeated .ItemCarrito items = 2;</code>
    */
   @java.lang.Override
-  public java.util.List<? extends com.tienda.grpc.ProductoOrBuilder> 
+  public java.util.List<? extends com.tienda.grpc.ItemCarritoOrBuilder> 
       getItemsOrBuilderList() {
     return items_;
   }
   /**
-   * <pre>
-   * Lista de productos
-   * </pre>
-   *
-   * <code>repeated .Producto items = 2;</code>
+   * <code>repeated .ItemCarrito items = 2;</code>
    */
   @java.lang.Override
   public int getItemsCount() {
     return items_.size();
   }
   /**
-   * <pre>
-   * Lista de productos
-   * </pre>
-   *
-   * <code>repeated .Producto items = 2;</code>
+   * <code>repeated .ItemCarrito items = 2;</code>
    */
   @java.lang.Override
-  public com.tienda.grpc.Producto getItems(int index) {
+  public com.tienda.grpc.ItemCarrito getItems(int index) {
     return items_.get(index);
   }
   /**
-   * <pre>
-   * Lista de productos
-   * </pre>
-   *
-   * <code>repeated .Producto items = 2;</code>
+   * <code>repeated .ItemCarrito items = 2;</code>
    */
   @java.lang.Override
-  public com.tienda.grpc.ProductoOrBuilder getItemsOrBuilder(
+  public com.tienda.grpc.ItemCarritoOrBuilder getItemsOrBuilder(
       int index) {
     return items_.get(index);
   }
@@ -483,9 +463,9 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 10
             case 18: {
-              com.tienda.grpc.Producto m =
+              com.tienda.grpc.ItemCarrito m =
                   input.readMessage(
-                      com.tienda.grpc.Producto.parser(),
+                      com.tienda.grpc.ItemCarrito.parser(),
                       extensionRegistry);
               if (itemsBuilder_ == null) {
                 ensureItemsIsMutable();
@@ -584,26 +564,22 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.util.List<com.tienda.grpc.Producto> items_ =
+    private java.util.List<com.tienda.grpc.ItemCarrito> items_ =
       java.util.Collections.emptyList();
     private void ensureItemsIsMutable() {
       if (!((bitField0_ & 0x00000002) != 0)) {
-        items_ = new java.util.ArrayList<com.tienda.grpc.Producto>(items_);
+        items_ = new java.util.ArrayList<com.tienda.grpc.ItemCarrito>(items_);
         bitField0_ |= 0x00000002;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tienda.grpc.Producto, com.tienda.grpc.Producto.Builder, com.tienda.grpc.ProductoOrBuilder> itemsBuilder_;
+        com.tienda.grpc.ItemCarrito, com.tienda.grpc.ItemCarrito.Builder, com.tienda.grpc.ItemCarritoOrBuilder> itemsBuilder_;
 
     /**
-     * <pre>
-     * Lista de productos
-     * </pre>
-     *
-     * <code>repeated .Producto items = 2;</code>
+     * <code>repeated .ItemCarrito items = 2;</code>
      */
-    public java.util.List<com.tienda.grpc.Producto> getItemsList() {
+    public java.util.List<com.tienda.grpc.ItemCarrito> getItemsList() {
       if (itemsBuilder_ == null) {
         return java.util.Collections.unmodifiableList(items_);
       } else {
@@ -611,11 +587,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Lista de productos
-     * </pre>
-     *
-     * <code>repeated .Producto items = 2;</code>
+     * <code>repeated .ItemCarrito items = 2;</code>
      */
     public int getItemsCount() {
       if (itemsBuilder_ == null) {
@@ -625,13 +597,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Lista de productos
-     * </pre>
-     *
-     * <code>repeated .Producto items = 2;</code>
+     * <code>repeated .ItemCarrito items = 2;</code>
      */
-    public com.tienda.grpc.Producto getItems(int index) {
+    public com.tienda.grpc.ItemCarrito getItems(int index) {
       if (itemsBuilder_ == null) {
         return items_.get(index);
       } else {
@@ -639,14 +607,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Lista de productos
-     * </pre>
-     *
-     * <code>repeated .Producto items = 2;</code>
+     * <code>repeated .ItemCarrito items = 2;</code>
      */
     public Builder setItems(
-        int index, com.tienda.grpc.Producto value) {
+        int index, com.tienda.grpc.ItemCarrito value) {
       if (itemsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -660,14 +624,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Lista de productos
-     * </pre>
-     *
-     * <code>repeated .Producto items = 2;</code>
+     * <code>repeated .ItemCarrito items = 2;</code>
      */
     public Builder setItems(
-        int index, com.tienda.grpc.Producto.Builder builderForValue) {
+        int index, com.tienda.grpc.ItemCarrito.Builder builderForValue) {
       if (itemsBuilder_ == null) {
         ensureItemsIsMutable();
         items_.set(index, builderForValue.build());
@@ -678,13 +638,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Lista de productos
-     * </pre>
-     *
-     * <code>repeated .Producto items = 2;</code>
+     * <code>repeated .ItemCarrito items = 2;</code>
      */
-    public Builder addItems(com.tienda.grpc.Producto value) {
+    public Builder addItems(com.tienda.grpc.ItemCarrito value) {
       if (itemsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -698,14 +654,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Lista de productos
-     * </pre>
-     *
-     * <code>repeated .Producto items = 2;</code>
+     * <code>repeated .ItemCarrito items = 2;</code>
      */
     public Builder addItems(
-        int index, com.tienda.grpc.Producto value) {
+        int index, com.tienda.grpc.ItemCarrito value) {
       if (itemsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -719,14 +671,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Lista de productos
-     * </pre>
-     *
-     * <code>repeated .Producto items = 2;</code>
+     * <code>repeated .ItemCarrito items = 2;</code>
      */
     public Builder addItems(
-        com.tienda.grpc.Producto.Builder builderForValue) {
+        com.tienda.grpc.ItemCarrito.Builder builderForValue) {
       if (itemsBuilder_ == null) {
         ensureItemsIsMutable();
         items_.add(builderForValue.build());
@@ -737,14 +685,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Lista de productos
-     * </pre>
-     *
-     * <code>repeated .Producto items = 2;</code>
+     * <code>repeated .ItemCarrito items = 2;</code>
      */
     public Builder addItems(
-        int index, com.tienda.grpc.Producto.Builder builderForValue) {
+        int index, com.tienda.grpc.ItemCarrito.Builder builderForValue) {
       if (itemsBuilder_ == null) {
         ensureItemsIsMutable();
         items_.add(index, builderForValue.build());
@@ -755,14 +699,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Lista de productos
-     * </pre>
-     *
-     * <code>repeated .Producto items = 2;</code>
+     * <code>repeated .ItemCarrito items = 2;</code>
      */
     public Builder addAllItems(
-        java.lang.Iterable<? extends com.tienda.grpc.Producto> values) {
+        java.lang.Iterable<? extends com.tienda.grpc.ItemCarrito> values) {
       if (itemsBuilder_ == null) {
         ensureItemsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -774,11 +714,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Lista de productos
-     * </pre>
-     *
-     * <code>repeated .Producto items = 2;</code>
+     * <code>repeated .ItemCarrito items = 2;</code>
      */
     public Builder clearItems() {
       if (itemsBuilder_ == null) {
@@ -791,11 +727,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Lista de productos
-     * </pre>
-     *
-     * <code>repeated .Producto items = 2;</code>
+     * <code>repeated .ItemCarrito items = 2;</code>
      */
     public Builder removeItems(int index) {
       if (itemsBuilder_ == null) {
@@ -808,24 +740,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Lista de productos
-     * </pre>
-     *
-     * <code>repeated .Producto items = 2;</code>
+     * <code>repeated .ItemCarrito items = 2;</code>
      */
-    public com.tienda.grpc.Producto.Builder getItemsBuilder(
+    public com.tienda.grpc.ItemCarrito.Builder getItemsBuilder(
         int index) {
       return getItemsFieldBuilder().getBuilder(index);
     }
     /**
-     * <pre>
-     * Lista de productos
-     * </pre>
-     *
-     * <code>repeated .Producto items = 2;</code>
+     * <code>repeated .ItemCarrito items = 2;</code>
      */
-    public com.tienda.grpc.ProductoOrBuilder getItemsOrBuilder(
+    public com.tienda.grpc.ItemCarritoOrBuilder getItemsOrBuilder(
         int index) {
       if (itemsBuilder_ == null) {
         return items_.get(index);  } else {
@@ -833,13 +757,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Lista de productos
-     * </pre>
-     *
-     * <code>repeated .Producto items = 2;</code>
+     * <code>repeated .ItemCarrito items = 2;</code>
      */
-    public java.util.List<? extends com.tienda.grpc.ProductoOrBuilder> 
+    public java.util.List<? extends com.tienda.grpc.ItemCarritoOrBuilder> 
          getItemsOrBuilderList() {
       if (itemsBuilder_ != null) {
         return itemsBuilder_.getMessageOrBuilderList();
@@ -848,45 +768,33 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Lista de productos
-     * </pre>
-     *
-     * <code>repeated .Producto items = 2;</code>
+     * <code>repeated .ItemCarrito items = 2;</code>
      */
-    public com.tienda.grpc.Producto.Builder addItemsBuilder() {
+    public com.tienda.grpc.ItemCarrito.Builder addItemsBuilder() {
       return getItemsFieldBuilder().addBuilder(
-          com.tienda.grpc.Producto.getDefaultInstance());
+          com.tienda.grpc.ItemCarrito.getDefaultInstance());
     }
     /**
-     * <pre>
-     * Lista de productos
-     * </pre>
-     *
-     * <code>repeated .Producto items = 2;</code>
+     * <code>repeated .ItemCarrito items = 2;</code>
      */
-    public com.tienda.grpc.Producto.Builder addItemsBuilder(
+    public com.tienda.grpc.ItemCarrito.Builder addItemsBuilder(
         int index) {
       return getItemsFieldBuilder().addBuilder(
-          index, com.tienda.grpc.Producto.getDefaultInstance());
+          index, com.tienda.grpc.ItemCarrito.getDefaultInstance());
     }
     /**
-     * <pre>
-     * Lista de productos
-     * </pre>
-     *
-     * <code>repeated .Producto items = 2;</code>
+     * <code>repeated .ItemCarrito items = 2;</code>
      */
-    public java.util.List<com.tienda.grpc.Producto.Builder> 
+    public java.util.List<com.tienda.grpc.ItemCarrito.Builder> 
          getItemsBuilderList() {
       return getItemsFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tienda.grpc.Producto, com.tienda.grpc.Producto.Builder, com.tienda.grpc.ProductoOrBuilder> 
+        com.tienda.grpc.ItemCarrito, com.tienda.grpc.ItemCarrito.Builder, com.tienda.grpc.ItemCarritoOrBuilder> 
         getItemsFieldBuilder() {
       if (itemsBuilder_ == null) {
         itemsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            com.tienda.grpc.Producto, com.tienda.grpc.Producto.Builder, com.tienda.grpc.ProductoOrBuilder>(
+            com.tienda.grpc.ItemCarrito, com.tienda.grpc.ItemCarrito.Builder, com.tienda.grpc.ItemCarritoOrBuilder>(
                 items_,
                 ((bitField0_ & 0x00000002) != 0),
                 getParentForChildren(),

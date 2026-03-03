@@ -1,5 +1,7 @@
 syntax = "proto3";
 
+import "google/protobuf/empty.proto";
+
 option java_package = "com.tienda.grpc";
 option java_multiple_files = true;
 
@@ -7,6 +9,12 @@ option java_multiple_files = true;
 service CarritoService {
   // Unario: Envía el carrito completo y recibe el total procesado
   rpc procesarCarrito (CarritoRequest) returns (CarritoResponse);
+  rpc ObtenerProductosDisponibles(google.protobuf.Empty) returns (ListaProductos);
+}
+
+//listar Producto del inventario
+message ListaProductos{
+    repeated Producto productos = 1;
 }
 
 //Producto del catalago sin cantidad
@@ -25,7 +33,7 @@ message ItemCarrito{
 // La petición contiene una lista de productos
 message CarritoRequest {
   string usuario_id = 1;
-  repeated Producto items = 2; // Lista de productos
+  repeated ItemCarrito items = 2;
 }
 
 // La respuesta con el cálculo final

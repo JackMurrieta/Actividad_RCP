@@ -36,10 +36,4 @@ public interface ProductoOrBuilder extends
    * @return The precio.
    */
   double getPrecio();
-
-  /**
-   * <code>int32 cantidad = 4;</code>
-   * @return The cantidad.
-   */
-  int getCantidad();
 }

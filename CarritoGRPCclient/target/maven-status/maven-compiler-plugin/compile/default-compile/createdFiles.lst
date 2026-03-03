@@ -1,5 +1,7 @@
 com\tienda\grpc\Producto.class
 com\tienda\grpc\CarritoServiceGrpc.class
+com\tienda\grpc\ItemCarrito.class
+com\tienda\grpc\ItemCarrito$1.class
 com\tienda\grpc\CarritoRequestOrBuilder.class
 com\tienda\grpc\CarritoServiceGrpc$1.class
 com\tienda\grpc\CarritoRequest$Builder.class
@@ -16,8 +18,10 @@ com\tienda\grpc\CarritoServiceGrpc$2.class
 com\tienda\grpc\CarritoServiceGrpc$CarritoServiceFutureStub.class
 com\tienda\grpc\CarritoServiceGrpc$MethodHandlers.class
 com\tienda\grpc\CarritoServiceGrpc$CarritoServiceMethodDescriptorSupplier.class
+com\tienda\grpc\ItemCarritoOrBuilder.class
 com\tienda\grpc\CarritoServiceGrpc$CarritoServiceStub.class
 com\tienda\grpc\CarritoRequest.class
+com\tienda\grpc\ItemCarrito$Builder.class
 com\tienda\grpc\CarritoServiceGrpc$CarritoServiceImplBase.class
 com\itson\carritogrpcclient\CarritoGRPCclient.class
 com\tienda\grpc\Producto$Builder.class

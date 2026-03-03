@@ -20,6 +20,11 @@ public final class Carrito {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_Producto_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ItemCarrito_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_ItemCarrito_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CarritoRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -38,16 +43,17 @@ public final class Carrito {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\rcarrito.proto\"H\n\010Producto\022\n\n\002id\030\001 \001(\t\022" +
-      "\016\n\006nombre\030\002 \001(\t\022\016\n\006precio\030\003 \001(\001\022\020\n\010canti" +
-      "dad\030\004 \001(\005\">\n\016CarritoRequest\022\022\n\nusuario_i" +
-      "d\030\001 \001(\t\022\030\n\005items\030\002 \003(\0132\t.Producto\"u\n\017Car" +
-      "ritoResponse\022\026\n\016transaccion_id\030\001 \001(\t\022\022\n\n" +
-      "total_neto\030\002 \001(\001\022\021\n\timpuestos\030\003 \001(\001\022\023\n\013t" +
-      "otal_pagar\030\004 \001(\001\022\016\n\006estado\030\005 \001(\t2F\n\016Carr" +
-      "itoService\0224\n\017procesarCarrito\022\017.CarritoR" +
-      "equest\032\020.CarritoResponseB\023\n\017com.tienda.g" +
-      "rpcP\001b\006proto3"
+      "\n\rcarrito.proto\"6\n\010Producto\022\n\n\002id\030\001 \001(\t\022" +
+      "\016\n\006nombre\030\002 \001(\t\022\016\n\006precio\030\003 \001(\001\"4\n\013ItemC" +
+      "arrito\022\023\n\013producto_id\030\001 \001(\t\022\020\n\010cantidad\030" +
+      "\002 \001(\005\">\n\016CarritoRequest\022\022\n\nusuario_id\030\001 " +
+      "\001(\t\022\030\n\005items\030\002 \003(\0132\t.Producto\"u\n\017Carrito" +
+      "Response\022\026\n\016transaccion_id\030\001 \001(\t\022\022\n\ntota" +
+      "l_neto\030\002 \001(\001\022\021\n\timpuestos\030\003 \001(\001\022\023\n\013total" +
+      "_pagar\030\004 \001(\001\022\016\n\006estado\030\005 \001(\t2F\n\016CarritoS" +
+      "ervice\0224\n\017procesarCarrito\022\017.CarritoReque" +
+      "st\032\020.CarritoResponseB\023\n\017com.tienda.grpcP" +
+      "\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -58,15 +64,21 @@ public final class Carrito {
     internal_static_Producto_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_Producto_descriptor,
-        new java.lang.String[] { "Id", "Nombre", "Precio", "Cantidad", });
-    internal_static_CarritoRequest_descriptor =
+        new java.lang.String[] { "Id", "Nombre", "Precio", });
+    internal_static_ItemCarrito_descriptor =
       getDescriptor().getMessageTypes().get(1);
+    internal_static_ItemCarrito_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_ItemCarrito_descriptor,
+        new java.lang.String[] { "ProductoId", "Cantidad", });
+    internal_static_CarritoRequest_descriptor =
+      getDescriptor().getMessageTypes().get(2);
     internal_static_CarritoRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CarritoRequest_descriptor,
         new java.lang.String[] { "UsuarioId", "Items", });
     internal_static_CarritoResponse_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_CarritoResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CarritoResponse_descriptor,

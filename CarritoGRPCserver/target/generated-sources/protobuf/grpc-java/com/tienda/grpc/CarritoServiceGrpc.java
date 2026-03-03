@@ -49,6 +49,37 @@ public final class CarritoServiceGrpc {
     return getProcesarCarritoMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.google.protobuf.Empty,
+      com.tienda.grpc.ListaProductos> getObtenerProductosDisponiblesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ObtenerProductosDisponibles",
+      requestType = com.google.protobuf.Empty.class,
+      responseType = com.tienda.grpc.ListaProductos.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.google.protobuf.Empty,
+      com.tienda.grpc.ListaProductos> getObtenerProductosDisponiblesMethod() {
+    io.grpc.MethodDescriptor<com.google.protobuf.Empty, com.tienda.grpc.ListaProductos> getObtenerProductosDisponiblesMethod;
+    if ((getObtenerProductosDisponiblesMethod = CarritoServiceGrpc.getObtenerProductosDisponiblesMethod) == null) {
+      synchronized (CarritoServiceGrpc.class) {
+        if ((getObtenerProductosDisponiblesMethod = CarritoServiceGrpc.getObtenerProductosDisponiblesMethod) == null) {
+          CarritoServiceGrpc.getObtenerProductosDisponiblesMethod = getObtenerProductosDisponiblesMethod =
+              io.grpc.MethodDescriptor.<com.google.protobuf.Empty, com.tienda.grpc.ListaProductos>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ObtenerProductosDisponibles"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.protobuf.Empty.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tienda.grpc.ListaProductos.getDefaultInstance()))
+              .setSchemaDescriptor(new CarritoServiceMethodDescriptorSupplier("ObtenerProductosDisponibles"))
+              .build();
+        }
+      }
+    }
+    return getObtenerProductosDisponiblesMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -109,6 +140,13 @@ public final class CarritoServiceGrpc {
         io.grpc.stub.StreamObserver<com.tienda.grpc.CarritoResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getProcesarCarritoMethod(), responseObserver);
     }
+
+    /**
+     */
+    default void obtenerProductosDisponibles(com.google.protobuf.Empty request,
+        io.grpc.stub.StreamObserver<com.tienda.grpc.ListaProductos> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getObtenerProductosDisponiblesMethod(), responseObserver);
+    }
   }
 
   /**
@@ -154,6 +192,14 @@ public final class CarritoServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getProcesarCarritoMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void obtenerProductosDisponibles(com.google.protobuf.Empty request,
+        io.grpc.stub.StreamObserver<com.tienda.grpc.ListaProductos> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getObtenerProductosDisponiblesMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -183,6 +229,13 @@ public final class CarritoServiceGrpc {
     public com.tienda.grpc.CarritoResponse procesarCarrito(com.tienda.grpc.CarritoRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getProcesarCarritoMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.tienda.grpc.ListaProductos obtenerProductosDisponibles(com.google.protobuf.Empty request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getObtenerProductosDisponiblesMethod(), getCallOptions(), request);
     }
   }
 
@@ -215,9 +268,18 @@ public final class CarritoServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getProcesarCarritoMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tienda.grpc.ListaProductos> obtenerProductosDisponibles(
+        com.google.protobuf.Empty request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getObtenerProductosDisponiblesMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_PROCESAR_CARRITO = 0;
+  private static final int METHODID_OBTENER_PRODUCTOS_DISPONIBLES = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -239,6 +301,10 @@ public final class CarritoServiceGrpc {
         case METHODID_PROCESAR_CARRITO:
           serviceImpl.procesarCarrito((com.tienda.grpc.CarritoRequest) request,
               (io.grpc.stub.StreamObserver<com.tienda.grpc.CarritoResponse>) responseObserver);
+          break;
+        case METHODID_OBTENER_PRODUCTOS_DISPONIBLES:
+          serviceImpl.obtenerProductosDisponibles((com.google.protobuf.Empty) request,
+              (io.grpc.stub.StreamObserver<com.tienda.grpc.ListaProductos>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -265,6 +331,13 @@ public final class CarritoServiceGrpc {
               com.tienda.grpc.CarritoRequest,
               com.tienda.grpc.CarritoResponse>(
                 service, METHODID_PROCESAR_CARRITO)))
+        .addMethod(
+          getObtenerProductosDisponiblesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.protobuf.Empty,
+              com.tienda.grpc.ListaProductos>(
+                service, METHODID_OBTENER_PRODUCTOS_DISPONIBLES)))
         .build();
   }
 
@@ -314,6 +387,7 @@ public final class CarritoServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new CarritoServiceFileDescriptorSupplier())
               .addMethod(getProcesarCarritoMethod())
+              .addMethod(getObtenerProductosDisponiblesMethod())
               .build();
         }
       }

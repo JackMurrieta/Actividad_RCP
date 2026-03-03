@@ -26,10 +26,10 @@ public class CarritoGRPCclient {
         // Creamos algunos productos usando el Builder
         Producto p1 = Producto.newBuilder()
                 .setId("PROD-001").setNombre("Laptop Gamer")
-                .setPrecio(1200.00).setCantidad(1).build();
+                .setPrecio(1200.00).build();
         Producto p2 = Producto.newBuilder()
                 .setId("PROD-002").setNombre("Mouse Óptico")
-                .setPrecio(25.50).setCantidad(2).build();
+                .setPrecio(25.50).build();
         // Construimos la petición del carrito
         CarritoRequest request = CarritoRequest.newBuilder()
                 .setUsuarioId("USER-123")
